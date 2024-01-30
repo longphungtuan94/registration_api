@@ -118,6 +118,11 @@ async def shutdown_db_client():
     db_client.close()
 
 
+@app.get("/", status_code=status.HTTP_200_OK)
+async def health_check():
+    return {"App status": "OK"}
+
+
 @app.get("/email/{email}", status_code=status.HTTP_200_OK)
 async def check_email(email: str, response: Response):
     users_collection = db[MONGODB_COLLECTION_NAME]
