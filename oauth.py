@@ -118,9 +118,9 @@ async def shutdown_db_client():
     db_client.close()
 
 
-@app.get("/", status_code=status.HTTP_200_OK)
+@app.get("/health", status_code=status.HTTP_200_OK)
 async def health_check():
-    return {"App status": "OK"}
+    return "OK"
 
 
 @app.get("/email/{email}", status_code=status.HTTP_200_OK)
