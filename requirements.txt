@@ -1,0 +1,7 @@
+fastapi[all]==0.109.0
+passlib==1.7.4
+pydantic==2.6.0
+motor==3.3.2
+python-jose==3.3.0
+loguru==0.7.2
+python-dotenv==1.0.0
